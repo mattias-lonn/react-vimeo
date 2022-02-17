@@ -34,6 +34,7 @@ class Vimeo extends React.Component {
       id: this.props.video,
       width: this.props.width,
       height: this.props.height,
+      texttrack: this.props.texttrack,
       autopause: this.props.autopause,
       autoplay: this.props.autoplay,
       byline: this.props.showByline,
@@ -60,6 +61,9 @@ class Vimeo extends React.Component {
       // eslint-disable-next-line react/destructuring-assignment
       const value = this.props[name];
       switch (name) {
+        case 'texttrack':
+          player.enableTextTrack(value);
+          break;
         case 'autopause':
           player.setAutopause(value);
           break;
@@ -226,6 +230,12 @@ if (process.env.NODE_ENV !== 'production') {
     /**
      * Pause this video automatically when another one plays.
      */
+    texttrack: PropTypes.string,
+
+    // Player parameters
+    /**
+     * Pause this video automatically when another one plays.
+     */
     autopause: PropTypes.bool,
 
     /**
@@ -366,6 +376,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 Vimeo.defaultProps = {
+  texttrack: false,
   autopause: true,
   autoplay: false,
   showByline: true,

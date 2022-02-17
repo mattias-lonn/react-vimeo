@@ -176,6 +176,11 @@ export interface VimeoProps {
   start?: number
 
   /**
+   * Set active text track (captions/subtitles).
+   */
+  texttrack?: boolean
+
+  /**
    * Pause this video automatically when another one plays.
    */
   autopause?: boolean

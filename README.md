@@ -35,6 +35,7 @@ import Vimeo from '@u-wave/react-vimeo';
 | paused | bool |  | Pause the video. |
 | volume | number |  | The playback volume as a number between 0 and 1. |
 | start | number |  | The time in seconds at which to start playing the video. |
+| texttrack | string |  | Set active text track (captions/subtitles). |
 | autopause | bool | true | Pause this video automatically when another one plays. |
 | autoplay | bool | false | Automatically start playback of the video. Note that this won’t work on some devices. |
 | showByline | bool | true | Show the byline on the video. |

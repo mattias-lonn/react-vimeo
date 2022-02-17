@@ -15,6 +15,7 @@ export default function createVimeo({ shouldFail = false } = {}) {
     },
     setVolume: createPromiseSpy(),
     setCurrentTime: createPromiseSpy(),
+    setTexttrack: createPromiseSpy(),
     setAutopause: createPromiseSpy(),
     setColor: createPromiseSpy(),
     setLoop: createPromiseSpy(),
